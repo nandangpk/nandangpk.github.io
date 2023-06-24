@@ -65,10 +65,10 @@
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Work
                 Experiences</a>
 
-              <a href="#projects" hidden
+              <a id="nav-projects-d" onclick="switchToPage('projects');"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Projects</a>
 
-              <a href="#products" hidden
+              <a id="nav-products-d" onclick="switchToPage('products');"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Products</a>
 
               <a id="nav-contacts-d" onclick="switchToPage('contacts');"
@@ -93,13 +93,13 @@
         <a id="nav-work-experiences-m" onclick="switchToPage('work-experiences'); $('#mobile-menu').toggle();"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Work
           Experiences</a>
-        <!--
-        <a id="nav-projects-m" href="#projects" onclick="$('#mobile-menu').toggle()" hidden
+        
+        <a id="nav-projects-m" onclick="switchToPage('projects'); $('#mobile-menu').toggle()" hidden
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
 
-        <a id="nav-products-m" href="#products" onclick="$('#mobile-menu').toggle()" hidden
+        <a id="nav-products-m" onclick="switchToPage('products'); $('#mobile-menu').toggle()" hidden
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</a>
-        -->
+        
         <a id="nav-contacts-m" onclick="switchToPage('contacts'); $('#mobile-menu').toggle();"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
       </div>
@@ -253,9 +253,24 @@
             <p class="text-xs text-gray-300 font-light">Mar 2023 - Present</p>
             <div class="text-sm text-gray-300 font-light">
           
-              <p class="mt-3">Collaborate with other developer to maintain and develop several web application for multi
-                company using Ruby on Rails.
+              <p class="mt-3">
+                Collaborate with other developer to maintain, debugging and develop 
+                new features based on user requirement on several web application 
+                for multi company using Ruby on Rails.
               </p>
+              <!--
+              <p class="mt-1">List of handled web application and their company: </p>
+              <ul class="ml-5 list-disc">
+                <li>SIP TSSI - Techno</li>
+                <p class="text-xs">PT. Techno Indonesia, PT. Tri-Saudara Sentosa Industri (Plant Pinang)</p>
+                <li>SIP TSSI Kapuk</li>
+                <p class="text-xs">PT. Tri-Saudara Sentosa Industri (Plant Kapuk)</p>
+                <li>ERP Provital</li>
+                <p class="text-xs">PT. Provital Perdana</p>
+                <li>ERP Tarafis</li>
+                <p class="text-xs">PT Tarafis Anugerah Medika</p>
+              </ul>
+            -->
             </div>
           </div>
           
@@ -264,27 +279,37 @@
             <p class="text-sm text-gray-200 font-light">Fullstack Developer</p>
             <p class="text-xs text-gray-300 font-light">Jun 2021 - Jan 2023</p>
             <div class="text-sm text-gray-300 font-light">
-          
-              <p class="mt-3">Design, develop and maintain system (website and mobile app)
-                for local government with goals to simplify resident administration and improve service for local resident.
+              <p class="mt-3">
+                Design, develop and maintain application for local government handling 
+                demographic data with goals to simplify resident administration and improve 
+                their service for local resident.
               </p>
-              At the first release, technology used were:
+              At the first release, technologies used were:
               <ul class="ml-5 list-disc">
-                <li>Backend: PHP (Native PHP, FPDF)</li>
-                <li>Frontend: HTML, CSS (Bootstrap, AdminLTE, ChartJS), Javascript (jQuery, ChartJS, html5-qrcode)</li>
-                <li>Database: MySQL</li>
-                <li> Others: -</li>
+                <li>Fullstack monolithic architecture with PHP (Native)</li>
+                <li>Bootstrap, AdminLTE (admin panel) for better UI</li>
+                <li>Common Javascript libraries such as jQuery, ChartJS, etc.</li>
+                <li>MySQL database</li>
               </ul>
-              After several revision, technology used were:
+              After several revision, technologies used were:
               <ul class="ml-5 list-disc">
-                <li>Backend: Golang (Gin Gonic, Microservice, gofpdf)</li>
-                <li>Frontend: ReactJS (Bootstrap, CoreUI, ChartJS)</li>
-                <li>Database: MySQL</li>
-                <li>Others: Flutter (Mobile App for field operator)</li>
+                <li>Gin Gonic (Go) backend with microservice architecture</li>
+                <li>ReactJS frontend with Bootstrap and CoreUI (admin panel)</li>
+                <li>MySQL database</li>
+                <li>Flutter mobile app for field operator</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <div class="px-5" id="projects" hidden>
+          updated-soon
+        </div>
+
+        <div class="px-5" id="products" hidden>
+          updated-soon
+        </div>
+
         <div class="px-5" id="contacts" hidden>
           <center>
             <p class="mb-10 text-xl sm:text-3xl font-black bg-green-400 rounded-lg py-2">CONTACT</p>
