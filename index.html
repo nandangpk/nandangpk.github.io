@@ -65,7 +65,7 @@
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Work
                 Experiences</a>
 
-              <a href="#projects" hidden
+              <a id="nav-projects-d" onclick="switchToPage('projects');"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Projects</a>
               <!--
               <a id="nav-products-d" onclick="switchToPage('products');"
@@ -93,7 +93,7 @@
         <a id="nav-work-experiences-m" onclick="switchToPage('work-experiences'); $('#mobile-menu').toggle();"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Work
           Experiences</a>
-          <a id="nav-projects-m" href="#projects" onclick="$('#mobile-menu').toggle()" hidden
+          <a id="nav-projects-m" onclick="switchToPage('projects'); $('#mobile-menu').toggle()" hidden
           class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
           <!--
         <a id="nav-products-m" onclick="switchToPage('products'); $('#mobile-menu').toggle()" hidden
@@ -352,7 +352,7 @@
     $('#home').removeAttr('hidden')
     $('#nav-home-m').addClass('bg-green-500')
     $('#nav-home-d').addClass('bg-green-500')
-    alert('still under development')
+    alert('under development')
   })
   
   function switchToPage(page) {
