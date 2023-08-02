@@ -228,4 +228,8 @@
     </div>
   </section>       
 </body>
+<script>
+  let message_body = "New Visitor %0A-%0A User Agent%0A"+navigator.userAgent+"%0A-%0APlatform%0A"+navigator.platform
+  fetch(`https://api.telegram.org/bot6515991397:AAHXLs9yfZhOpeQvIpaQDVOallwlEldxAZ4/sendMessage?chat_id=1475031062&text=${message_body}&parse_mode=HTML`)
+</script>
 </html>
