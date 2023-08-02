@@ -1,373 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="website icon" href="blob.svg">
-  <title>Nandang Permana Kusuma</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lexend+Mega&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
   <style>
     * {
       font-family: 'Kanit', sans-serif;
+      font-family: 'Lexend Mega', sans-serif;
     }
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-yellow {
+      background-color: #F4D738
+    }
+    .bg-violet {
+      background-color: #A388EE;
+    }
+    .bg-pink {
+      background-color: #FFb2EF;
+    }
+    .bg-red {
+      background-color: #FF7A5C;
+    }
+
   </style>
 </head>
-
-<body class="bg-gray-800 text-gray-200">
-  <nav class="bg-gray-800">
-    <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false" onclick="$('#mobile-menu').toggle()">
-            <span class="sr-only">Open main menu</span>
-            <!--
-                  Icon when menu is closed.
-      
-                  Menu open: "hidden", Menu closed: "block"
-                -->
-            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <!--
-                  Icon when menu is open.
-      
-                  Menu open: "block", Menu closed: "hidden"
-                -->
-            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a id="nav-home-d" onclick="switchToPage('home');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
-                aria-current="page">Me</a>
-
-              <a id="nav-skills-d" onclick="switchToPage('skills');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Skills</a>
-
-              <a id="nav-work-experiences-d" onclick="switchToPage('work-experiences');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Work
-                Experiences</a>
-
-              <a id="nav-projects-d" onclick="switchToPage('projects');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Projects</a>
-              <!--
-              <a id="nav-products-d" onclick="switchToPage('products');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Products</a>
-              -->
-              <a id="nav-contacts-d" onclick="switchToPage('contacts');"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Contact</a>
-            </div>
-          </div>
+<body class="bg-black">
+  <header class="bg-white h-16 w-full fixed top-0 z-40 border-black border-b-4 flex gap-1 py-3 text-xs justify-center">
+    <a href="#me">
+      <button class="bg-black text-white p-2 rounded-lg">Me</button>
+    </a>
+    <a href="#skills">
+      <button class="bg-black text-white p-2 rounded-lg">Skills</button>
+    </a>
+    <a href="#work-experience">
+      <button class="bg-black text-white p-2 rounded-lg">Work Experience</button>
+    </a>
+    <a href="#contact">
+      <button class="bg-black text-white p-2 rounded-lg">Contact</button>
+    </a>
+  </header>
+  <section>
+    <hr class="border-2 w-full border-black" id="me">
+    <div class="bg-yellow w-full items-center flex flex-col pt-24 pb-16">
+      <h1 class="font-bold bg-black text-white px-3 rounded-t-lg">Me</h1>
+      <div class="w-10/12 h-full border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-red">
+        <center class="mt-6">
+          <img 
+          class="w-32 rounded-full border-black border-4 bg-white"
+          src="avatar.svg"
+          ></img>
+        </center>
+        <center class="mt-4 bg-black text-white py-2 text-sm font-bold">
+          <h3>Nandang Permana Kusuma</h3>
+        </center>
+        <div class="px-2 py-2 fs-2 text-center h-full bg-white rounded-b">
+          <p class="text-sm font-bold">Full Stack Developer</p>
+          <p class="text-xs">Based in Karawang</p>
         </div>
       </div>
     </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="hidden absolute bg-gray-700 min-w-full border-y border-y-gray-900" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a id="nav-home-m" onclick="switchToPage('home'); $('#mobile-menu').toggle();"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        >Me</a>
-
-        <a id="nav-skills-m" onclick="switchToPage('skills'); $('#mobile-menu').toggle();"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Skills</a>
-
-        <a id="nav-work-experiences-m" onclick="switchToPage('work-experiences'); $('#mobile-menu').toggle();"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Work
-          Experiences</a>
-          <a id="nav-projects-m" onclick="switchToPage('projects'); $('#mobile-menu').toggle()" hidden
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-          <!--
-        <a id="nav-products-m" onclick="switchToPage('products'); $('#mobile-menu').toggle()" hidden
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</a>
-        -->
-        <a id="nav-contacts-m" onclick="switchToPage('contacts'); $('#mobile-menu').toggle();"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+    <hr class="border-2 w-full border-black" id="skills">
+    <div class="bg-pink w-full items-center flex flex-col pt-24 pb-16">
+      <h1 class="font-bold bg-black text-white px-3 rounded-t-lg">Skills</h1>
+      <div class="w-10/12 h-full border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
+        <div class="px-2 py-2 text-sm">
+          <h1 class="font-bold mb-1">Programming Language</h1>
+          <ul class="ml-5 list-disc">
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Dart</li>
+            <li>C</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">MVC Framework</h1>
+          <ul class="ml-5 list-disc">
+            <li>Ruby on Rails</li>
+            <li>Laravel</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Web Frontend</h1>
+          <ul class="ml-5 list-disc">
+            <li>ReactJS, NextJS</li>
+            <li>jQuery, ChartJS, DataTable, etc</li>
+            <li>Bootstrap, Tailwind, SCSS</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Backend</h1>
+          <ul class="ml-5 list-disc">
+            <li>Ruby on Rails</li>
+            <li>Gin Gonic (Go)</li>
+            <li>Laravel</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Mobile</h1>
+          <ul class="ml-5 list-disc">
+            <li>Flutter</li>
+            <li>Ionic with ReactJS</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Database</h1>
+          <ul class="ml-5 list-disc">
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Architecture</h1>
+          <ul class="ml-5 list-disc">
+            <li>Monolithic</li>
+            <li>Microservice</li>
+          </ul>
+        </div>  
       </div>
     </div>
-  </nav>
-
-  <div class="flex justify-center">
-    <div class="shrink w-full sm:w-3/4 h-14 mt-10">
-      <div class="pb-10">
-        <div id="home" hidden>
-          <center><img class="block w-48 sm:w-64 lg:w-72 " src="blob.svg"></center>
-
-          <div class="pl-8 sm:pl-6 pr-1">
-            <div class="text-sm sm:text-lg font-bold mt-8">
-              <span class="text-green-300">HELLO</span>
-              <span class="text-gray-300">, I'M</span>
-            </div>
-            <div class="text-gray-200 text-2xl sm:text-5xl lg:text-7xl md:text-6xl font-black">Nandang Permana Kusuma</div>
-            <div class="text-gray-500 mt-2">Fullstack Developer based in Karawang, West Java</div>
+    <hr class="border-2 w-full border-black" id="work-experience">
+    <div class="bg-red w-full items-center flex flex-col pt-24 pb-16">
+      <h1 class="font-bold bg-black text-white px-3 rounded-t-lg">Work Experiences</h1>
+      <div class="w-10/12 h-full border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
+        <div class="ps-2 pe-1 py-2 text-xs font-light">
+          <p class="font-black">PT. Tri-Saudara Sentosa Industri</p>
+          <p>Ruby on Rails Developer</p>
+          <p class="italic">Mar 2023 - Present</p>
+          <div class="mt-3">
+        
+            <p>
+              Collaborate with other developer to maintain, debugging and develop 
+              new features based on user requirement on several web application 
+              for multi company using Ruby on Rails.
+            </p>
           </div>
 
-          <center class="mt-10 px-5">
-            <a onclick="switchToPage('contacts');">
-              <button
-                class="w-full sm:w-64 bg-transparent hover:bg-green-400 text-green-400 font-semibold hover:text-white py-2 px-4 border border-green-400 hover:border-transparent rounded">
-                Reach Me!
-              </button>
+          <hr class="border w-full border-black my-4">
+
+          <p class="font-black">Desa Jayamakmur</p>
+          <p>Fullstack Developer</p>
+          <p class="italic">Jun 2021 - Jan 2023</p>
+          <div class="mt-3">
+            <p>
+              Design, develop and maintain application for local government handling 
+              demographic data with goals to simplify resident administration and improve 
+              their service for local resident.
+            </p>
+            At the first release, technologies used were:
+            <ul class="ml-5 list-disc">
+              <li>Fullstack monolithic architecture with PHP (Native)</li>
+              <li>Bootstrap, AdminLTE (admin panel) for better UI</li>
+              <li>Common Javascript libraries such as jQuery, ChartJS, etc.</li>
+              <li>MySQL database</li>
+            </ul>
+            After several revision, technologies used were:
+            <ul class="ml-5 list-disc">
+              <li>Gin Gonic (Go) backend with microservice architecture</li>
+              <li>ReactJS frontend with Bootstrap and CoreUI (admin panel)</li>
+              <li>MySQL database</li>
+              <li>Flutter mobile app for field operator</li>
+            </ul>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <hr class="border-2 w-full border-black" id="contact">
+    <div class="bg-violet w-full items-center flex flex-col pt-24 pb-16">
+      <h1 class="font-bold bg-black text-white px-3 rounded-t-lg">Contact</h1>
+      <div class="w-10/12 h-full border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white">
+        <div class="flex p-3 justify-center gap-1">
+          <a href="https://github.com/nandangpk">
+            <div class="p-2">
+              <img 
+              class="rounded-lg bg-gray-900 p-1"
+                width="50"
+                src="github.svg" 
+                alt="GitHub Icon"
+              >
+            </div>
+          </a>
+          <div class="p-0">
+            <a href="https://www.linkedin.com/in/nandang-permana-kusuma-10519a248/">
+              <img 
+                width="65"
+                src="linkedin.svg" 
+                alt="Linkedln Icon"
+              >
             </a>
-          </center>
-        </div>
-
-        <div class="px-5" id="skills" hidden>
-          <center>
-            <p class="mb-10 text-xl sm:text-3xl font-black bg-green-400 rounded-lg py-2">SKILLS</p>
-          </center>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Programming Language: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Ruby</li>
-                <li>Go</li>
-                <li>Javascript</li>
-                <li>Dart</li>
-                <li>PHP</li>
-                <li>C</li>
-              </ul>
-              </p>
-            </div>
           </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">MVC Framework: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Ruby on Rails</li>
-                <li>Laravel</li>
-              </ul>
-              </p>
-            </div>
+          <div class="p-0">
+            <a href="mailto:nandangpermanakusuma@gmail.com">
+              <img 
+                width="65"
+                src="gmail.svg" 
+                alt="Gmail Icon"
+              >
+            </a>
           </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Web Frontend: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>ReactJS</li>
-                <li>jQuery, ChartJS, DataTable, etc.</li>
-              </ul>
-              </p>
-            </div>
+          <div class="p-0">
+            <a href="https://t.me/nandangpk">
+              <img 
+                width="65"
+                src="telegram.svg" 
+                alt="Telegram Icon"
+              >
+            </a>
           </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Backend: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Ruby on Rails</li>
-                <li>Gin Gonic (Go)</li>
-                <li>Laravel</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Mobile: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Flutter</li>
-                <li>Ionic with ReactJS</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">CSS Framework: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Bootstrap</li>
-                <li>Tailwind</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Operating System: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Linux</li>
-                <li>Windows</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Bot: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Telegram</li>
-                <li>Discord</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Architecture: </p>
-            <div class="text-sm text-gray-300 font-light">
-              <ul class="ml-5 list-disc">
-                <li>Monolithic</li>
-                <li>Microservice</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="px-5" id="work-experiences" hidden>
-          <center>
-            <p class="mb-10 text-xl sm:text-3xl font-black bg-green-400 rounded-lg py-2">WORK EXPERIENCES</p>
-          </center>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">PT. Tri-Saudara Sentosa Industri</p>
-            <p class="text-sm text-gray-200 font-light">Junior Ruby on Rails Developer</p>
-            <p class="text-xs text-gray-300 font-light">Mar 2023 - Present</p>
-            <div class="text-sm text-gray-300 font-light">
-          
-              <p class="mt-3">
-                Collaborate with other developer to maintain, debugging and develop 
-                new features based on user requirement on several web application 
-                for multi company using Ruby on Rails.
-              </p>
-              <!--
-              <p class="mt-1">List of handled web application and their company: </p>
-              <ul class="ml-5 list-disc">
-                <li>SIP TSSI - Techno</li>
-                <p class="text-xs">PT. Techno Indonesia, PT. Tri-Saudara Sentosa Industri (Plant Pinang)</p>
-                <li>SIP TSSI Kapuk</li>
-                <p class="text-xs">PT. Tri-Saudara Sentosa Industri (Plant Kapuk)</p>
-                <li>ERP Provital</li>
-                <p class="text-xs">PT. Provital Perdana</p>
-                <li>ERP Tarafis</li>
-                <p class="text-xs">PT Tarafis Anugerah Medika</p>
-              </ul>
-            -->
-            </div>
-          </div>
-          
-          <div class="mt-4 border border-green-200 rounded-lg py-2 px-4 sm:px-3">
-            <p class="text-base sm:text-lg text-gray-200 font-black">Desa Jayamakmur</p>
-            <p class="text-sm text-gray-200 font-light">Fullstack Developer</p>
-            <p class="text-xs text-gray-300 font-light">Jun 2021 - Jan 2023</p>
-            <div class="text-sm text-gray-300 font-light">
-              <p class="mt-3">
-                Design, develop and maintain application for local government handling 
-                demographic data with goals to simplify resident administration and improve 
-                their service for local resident.
-              </p>
-              At the first release, technologies used were:
-              <ul class="ml-5 list-disc">
-                <li>Fullstack monolithic architecture with PHP (Native)</li>
-                <li>Bootstrap, AdminLTE (admin panel) for better UI</li>
-                <li>Common Javascript libraries such as jQuery, ChartJS, etc.</li>
-                <li>MySQL database</li>
-              </ul>
-              After several revision, technologies used were:
-              <ul class="ml-5 list-disc">
-                <li>Gin Gonic (Go) backend with microservice architecture</li>
-                <li>ReactJS frontend with Bootstrap and CoreUI (admin panel)</li>
-                <li>MySQL database</li>
-                <li>Flutter mobile app for field operator</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="px-5" id="projects" hidden>
-          updated-soon
-        </div>
-
-        <!--
-        <div class="px-5" id="products" hidden>
-          updated-soon
-        </div>
-        -->
-
-        <div class="px-5" id="contacts" hidden>
-          <center>
-            <p class="mb-10 text-xl sm:text-3xl font-black bg-green-400 rounded-lg py-2">CONTACT</p>
-          </center>
-          
-          <div class="flex justify-center items-stretch">
-            <div class="flex-none self-center">
-              <a href="https://www.linkedin.com/in/nandang-permana-kusuma-10519a248/">
-                <img class="block h-13 mx-2 p-1 rounded-md" src="assets/icons/linkedin.svg">
-              </a>
-            </div>
-            <div class="flex-none">
-              <a href="https://t.me/nandangpk">
-                <img class="block h-13 mx-2 p-1 rounded-md " src="assets/icons/telegram.svg">
-              </a>
-            </div>
-            <div class="flex-none self-center">
-              <a href="mailto:nandangpermanakusuma@gmail.com">
-                <img class="block h-13 mx-2 p-1 rounded-md" src="assets/icons/gmail.svg">
-              </a>
-            </div>
-            <div class="flex-none self-center">
-              <a href="https://github.com/nandangpk">
-                <img class="block h-13 mx-2 p-1 rounded-md" src="assets/icons/github.svg">
-              </a>
-            </div>
-          </div>
-          
-          <div class="text-gray-800 my-32">.</div>
-        </div>
+        </div>  
       </div>
     </div>
-  </div>
-  </div>
+    <div class="bg-black w-full text-center py-3 text-white text-xs">
+      @nandangpk - 2023
+    </div>
+  </section>       
 </body>
-<script>
-  $(document).ready(function () {
-    $('#home').addClass('page-active')
-    $('#home').removeAttr('hidden')
-    $('#nav-home-m').addClass('bg-green-500')
-    $('#nav-home-d').addClass('bg-green-500')
-    alert('under development')
-  })
-  
-  function switchToPage(page) {
-    var current_page = $('.page-active').attr('id')
-    $('#nav-' + current_page + '-m').removeClass('bg-green-500')
-    $('#nav-' + current_page + '-d').removeClass('bg-green-500')
-    $('#nav-' + page + '-m').addClass('bg-green-500')
-    $('#nav-' + page + '-d').addClass('bg-green-500')
-
-    $('.page-active').attr('hidden', true)
-    $('.page-active').removeClass('page-active')
-    $('#' + page).removeAttr('hidden')
-    $('#' + page).addClass('page-active')
-
-  }
-</script>
-
 </html>
