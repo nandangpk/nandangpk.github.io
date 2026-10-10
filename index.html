@@ -129,6 +129,12 @@
             <li>Monolithic</li>
             <li>Microservice</li>
           </ul>
+          <hr class="border my-3 w-full border-black">
+          <h1 class="font-bold mb-1">Integration</h1>
+          <ul class="ml-5 list-disc text-xxs">
+            <li>Ceisa 4.0</li>
+            <li>Satu Sehat</li>
+          </ul>
         </div>  
       </div>
     </div>
@@ -137,15 +143,76 @@
       <h1 class="font-bold bg-black text-white px-3 rounded-t-lg py-1">Work Experiences</h1>
       <div class="w-10/12 h-full border-black border-2 rounded-md shadow-[6px_6px_0px_rgba(0,0,0,1)] bg-white">
         <div class="ps-2 pe-1 py-2 text-xs font-light">
+
+          <p class="font-black">PT. Dentalkoo Dental Solution</p>
+          <p>Software Engineer</p>
+          <p class="italic">Aug 2024 - Present | Remote</p>
+          <div class="mt-3 text-xxs">
+            <p>
+              Develop and maintain Dentalkoo, a Ruby on Rails management system
+              for dental clinics. The work covers patient reservations and doctor
+              schedules, medical records, billing, accounting, insurance claims,
+              inventory and patient programs such as membership and referrals,
+              along with integration to Satu Sehat.
+            </p>
+          </div>
+
+          <hr class="border w-full border-black my-4">
+
+          <p class="font-black">PT. Rafisma Solusi Pratama</p>
+          <p>Software Engineer</p>
+          <p class="italic">Jul 2024 - Present | Remote</p>
+          <div class="mt-3 text-xxs">
+            <p>
+              Rafisma is a software house that offer tailor-made software solutions, where I handle projects for a garment
+              company in a bonded zone, an airport cargo company and a Rafisma's own SaaS.
+            </p>
+
+            <br>
+
+            <p>
+              Build an ERP using Ruby on Rails, rebuilt from scratch with
+              data synchronization and financial workflows from older system (Microsoft Solomon).
+              Integrared with Ceisa 4.0 covering all customs documents,
+              along with an SMTP feature for customer needs.
+              I also build an IT-Inventory for Bea Cukai monitoring.
+            </p>
+
+            <br>
+
+            <p>
+              Build an aircraft cargo weighing application, with scale sensors
+              connected to a web app built with Ruby on Rails.
+            </p>
+
+          </div>
+
+          <hr class="border w-full border-black my-4">
+
           <p class="font-black">PT. Tri-Saudara Sentosa Industri</p>
           <p>Ruby on Rails Developer</p>
-          <p class="italic">Mar 2023 - Present</p>
+          <p class="italic">Mar 2023 - Present | Full Time Contract</p>
           <div class="mt-3 text-xxs">
         
             <p>
-              Collaborate with other developer to maintain, debugging and develop 
-              new features based on user requirement on several web application 
-              for multi company using Ruby on Rails.
+              Collaborate with other developers to maintain, debug, and develop
+              new features based on user requirements for several web applications
+              used across multiple companies, using Ruby on Rails.
+            </p>
+
+            <br>
+
+            <p>
+              Develop a Ceisa 4.0 integration with the company's ERP for host-to-host
+              customs documents, and synchronize response data from Ceisa 4.0 back
+              into the ERP.
+            </p>
+
+            <br>
+
+            <p>
+              Build a real-time assembly manufacturing system that uses QR codes on
+              the company's assembly line to meet customer requirements and orders.
             </p>
           </div>
 
@@ -153,7 +220,7 @@
 
           <p class="font-black">Desa Jayamakmur</p>
           <p>Fullstack Developer</p>
-          <p class="italic">Jun 2021 - Jan 2023</p>
+          <p class="italic">Jun 2021 - Jan 2023 | Full Time Permanent</p>
           <div class="mt-3 text-xxs">
             <p>
               Design, develop and maintain application for local government handling 
@@ -224,11 +291,12 @@
       </div>
     </div>
     <div class="bg-black w-full text-center py-3 text-white text-xs">
-      @nandangpk - 2023
+      @nandangpk - <span id="current-year"></span>
     </div>
   </section>       
 </body>
 <script>
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
   let message_body = "New Visitor %0A-%0A User Agent%0A"+navigator.userAgent+"%0A-%0APlatform%0A"+navigator.platform
   fetch(`https://api.telegram.org/bot6515991397:AAHXLs9yfZhOpeQvIpaQDVOallwlEldxAZ4/sendMessage?chat_id=1475031062&text=${message_body}&parse_mode=HTML`)
 </script>
